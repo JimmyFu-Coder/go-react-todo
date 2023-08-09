@@ -82,15 +82,22 @@ func TaskComplete(w http.ResponseWriter,r *http.Request){
 }
 
 func UndoTask(w http.ResponseWriter,r *http.Request){
-
+	w.Header().Set("Context-Type","application/x-www-form-urlencoded")
+	w.Header().Set("Acess-Control-Allow-Origin", "*")
+	w.Header().Set("Acess-Control-Allow-Methods", "PUT")
+	w.Header().Set("Acess-Control-Allow-Headers", "Context-Type")
 }
 
 func DeleteTask(w http.ResponseWriter,r *http.Request){
-
+	w.Header().Set("Context-Type","application/x-www-form-urlencoded")
+	w.Header().Set("Acess-Control-Allow-Origin", "*")
+	w.Header().Set("Acess-Control-Allow-Methods", "DELETE")
+	w.Header().Set("Acess-Control-Allow-Headers", "Context-Type")
 }
 
 func DeleteAllTask(w http.ResponseWriter,r *http.Request){
-
+	w.Header().Set("Context-Type","application/x-www-form-urlencoded")
+	w.Header().Set("Acess-Control-Allow-Origin", "*")
 }
 
 func GetAllTasks(){
